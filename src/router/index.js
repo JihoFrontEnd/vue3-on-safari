@@ -7,4 +7,9 @@ const router = createRouter({
   routes,
 });
 
+router.beforeEach(async (to, from, next) => {
+  console.log(`${from.name} → ${to.name}`);
+  next();
+});
+
 export default router;
