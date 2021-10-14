@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <Flex></Flex>
+  <hr />
 </template>
+
+<script>
+import Flex from "@/components/About/Flex.vue";
+
+export default {
+  components: { Flex },
+};
+</script>
+
+<style>
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+</style>
