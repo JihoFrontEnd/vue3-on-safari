@@ -1,13 +1,17 @@
 <template>
+  <hr />
   <Flex></Flex>
+  <hr />
+  <DataFromJSON></DataFromJSON>
   <hr />
 </template>
 
 <script>
 import Flex from "@/components/About/Flex.vue";
+import DataFromJSON from "@/components/About/DataFromJSON.vue";
 
 export default {
-  components: { Flex },
+  components: { Flex, DataFromJSON },
 };
 </script>
 

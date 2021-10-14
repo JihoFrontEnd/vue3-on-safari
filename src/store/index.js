@@ -1,8 +1,12 @@
 import { createStore } from "vuex";
 
+import items from "../data/items.json";
+
 export default createStore({
-  state: {},
+  state: { items },
   mutations: {},
   actions: {},
-  modules: {},
+  getters: {
+    ITEMS: (state) => state.items,
+  },
 });
