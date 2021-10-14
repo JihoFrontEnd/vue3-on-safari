@@ -11,4 +11,9 @@ export default [
     name: "About",
     component: () => import("../views/About.vue"),
   },
+  {
+    path: "/chart",
+    name: "Chart",
+    component: () => import("../views/Chart.vue"),
+  },
 ];

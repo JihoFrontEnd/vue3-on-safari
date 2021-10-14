@@ -18,13 +18,4 @@ export default {
 };
 </script>
 
-<style>
-.flex {
-  display: flex;
-  justify-content: space-around;
-}
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-}
-</style>
+<style></style>

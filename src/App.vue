@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link :to="{ name: 'Chart' }">Chart</router-link>
   </div>
   <router-view />
 </template>
@@ -32,5 +33,14 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
