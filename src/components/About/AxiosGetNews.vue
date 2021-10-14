@@ -4,7 +4,7 @@
     <ul>
       <li class="flex-between" v-for="article of NEWS" :key="article.id">
         <h3>{{ article.title }}</h3>
-        <p>
+        <p class="author">
           <template v-if="article.user">
             {{ article.user }}
           </template>
@@ -33,3 +33,12 @@ export default {
   methods: { ...mapActions(["FETCH_NEWS"]) },
 };
 </script>
+
+<style scoped>
+h3 {
+  text-align: left;
+}
+.author {
+  font-family: var(--font-noto-sans);
+}
+</style>

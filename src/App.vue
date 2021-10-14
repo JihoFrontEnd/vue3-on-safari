@@ -7,6 +7,12 @@
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+:root {
+  --font-noto-sans: "Noto Sans", "Noto Sans KR", sans-serif;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
