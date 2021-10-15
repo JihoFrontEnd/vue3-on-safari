@@ -16,4 +16,25 @@ export default [
     name: "Chart",
     component: () => import("../views/Chart.vue"),
   },
+  {
+    path: "/nested",
+    name: "Nested",
+    component: () => import(),
+    children: [
+      {
+        path: "",
+        redirect: "/nested/daughter"
+      },
+      {
+        path: "daughter",
+        name: "Daughter",
+        component: () => import("../views/Daughter.vue"),
+      },
+      {
+        path: "son",
+        name: "Son",
+        component: () => import("../views/Son.vue"),
+      },
+    ]
+  },
 ];
