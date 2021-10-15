@@ -1,5 +1,7 @@
 import { createStore } from "vuex";
 
+import user from "@/store/modules/user.js";
+
 import items from "../data/items.json";
 import { getNews } from "../api/news.js";
 
@@ -24,4 +26,5 @@ export default createStore({
     ITEMS: (state) => state.items,
     NEWS: (state) => state.news,
   },
+  modules: { user },
 });

@@ -4,8 +4,27 @@
     <router-link to="/about">About</router-link> |
     <router-link :to="{ name: 'Chart' }">Chart</router-link>
   </div>
+  <NavigationBar></NavigationBar>
   <router-view />
+  <Footer></Footer>
 </template>
+
+<script>
+import { mapActions } from "vuex";
+import NavigationBar from "@/components/common/navigation/NavigationBar.vue";
+import Footer from "@/components/common/footer/Footer.vue";
+
+export default {
+  components: { NavigationBar, Footer },
+  created() {
+    const token = localStorage.getItem("accessToken");
+    if (token) {
+      this.AUTH();
+    }
+  },
+  methods: { ...mapActions("user", ["AUTH"]) },
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");

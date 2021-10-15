@@ -1,4 +1,4 @@
-import Home from "../views/Home.vue";
+import Home from "@/views/Home.vue";
 
 export default [
   {
@@ -9,11 +9,16 @@ export default [
   {
     path: "/about",
     name: "About",
-    component: () => import("../views/About.vue"),
+    component: () => import("@/views/About.vue"),
   },
   {
     path: "/chart",
     name: "Chart",
-    component: () => import("../views/Chart.vue"),
+    component: () => import("@/views/Chart.vue"),
+  },
+  {
+    path: "/strategy",
+    name: "Strategy",
+    component: () => import("@/views/Strategy.vue"),
   },
 ];
