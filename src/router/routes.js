@@ -19,7 +19,7 @@ export default [
   {
     path: "/nested",
     name: "Nested",
-    component: () => import(),
+    component: () => import("../views/Nested.vue"),
     children: [
       {
         path: "",
