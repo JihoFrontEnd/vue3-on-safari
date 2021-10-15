@@ -1,0 +1,4 @@
+{
+  "on_session": ["Login", "Join"],
+  "no_session": ["Strategy", "Simulation", "MyPageView", "MyPageMain", "MyPageUpdate"]
+}

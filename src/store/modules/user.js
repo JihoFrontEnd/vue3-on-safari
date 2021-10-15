@@ -3,11 +3,11 @@ import api from "../../api/user.js";
 export default {
   namespaced: true,
   state: {
-    loggedIn: false,
+    user_id: false,
   },
   mutations: {
-    SET_USER_SESSION(state, loggedInState) {
-      state.loggedIn = loggedInState;
+    SET_USER_SESSION(state, user_id) {
+      state.user_id = user_id;
     },
   },
   actions: {
@@ -16,7 +16,7 @@ export default {
       if (loginResponse.status === 200) {
         const accessToken = loginResponse.headers.authorization;
         localStorage.setItem("accessToken", accessToken);
-        commit("SET_USER_SESSION", true);
+        commit("SET_USER_SESSION", userInput.user_id);
         return true;
       } else {
         alert("로그인에 실패했습니다.");
@@ -35,7 +35,7 @@ export default {
       if (authResoponse.status !== 200) {
         dispatch("LOGOUT");
       }
-      commit("SET_USER_SESSION", true);
+      commit("SET_USER_SESSION", authResoponse.data.user_id);
       return authResoponse;
     },
     async SIGNUP(context, userInput) {
@@ -47,5 +47,7 @@ export default {
       return isDuplicated.data;
     },
   },
-  getters: {},
+  getters: {
+    USER_ID: (state) => state.user_id,
+  },
 };

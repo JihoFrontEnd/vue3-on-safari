@@ -1,0 +1,57 @@
+{
+  "object": false,
+  "data": {
+    "report": false,
+    "chart": false,
+    "area": false,
+    "volume": false
+  },
+  "format": {
+    "chart": {
+      "height": 285,
+      "rightPriceScale": {
+        "scaleMargins": {
+          "bottom": 0.4
+        },
+        "borderVisible": false,
+        "mode": 0
+      },
+      "leftPriceScale": {
+        "scaleMargins": {
+          "top": 0.6
+        },
+        "visible": true
+      },
+      "layout": {
+        "backgroundColor": "#F3F3F3",
+        "textColor": "#000000"
+      },
+      "grid": {
+        "vertLines": {
+          "color": "rgba(42, 46, 57, 0)"
+        },
+        "horzLines": {
+          "color": "rgba(42, 46, 57, 0.6)"
+        }
+      }
+    },
+    "series": {
+      "area": {
+        "topColor": "rgba(255, 102, 0, 0.56)",
+        "bottomColor": "rgba(255, 102, 0, 0.04)",
+        "lineColor": "rgba(255, 102, 0, 1)",
+        "lineWidth": 2,
+        "priceFormat": {
+          "type": "volume"
+        }
+      },
+      "volume": {
+        "color": "#26a69a",
+        "priceFormat": {
+          "type": "volume"
+        },
+        "priceScaleId": "left"
+      }
+    }
+  }
+}

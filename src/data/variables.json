@@ -1,0 +1,49 @@
+{
+  "1": [
+    {
+      "items": [
+        {
+          "title": "단기",
+          "type": "number",
+          "icon": "fas fa-chart-pie",
+          "value": 0
+        },
+        {
+          "title": "장기",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "items": false
+    }
+  ],
+  "2": [
+    {
+      "items": [
+        {
+          "title": "매수",
+          "type": "number",
+          "icon": "fas fa-chart-pie",
+          "value": 0
+        },
+        {
+          "title": "매도",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "title": "RSI 기간",
+          "type": "number",
+          "icon": "fas fa-desktop",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

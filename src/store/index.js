@@ -1,30 +1,14 @@
 import { createStore } from "vuex";
 
-import user from "@/store/modules/user.js";
-
-import items from "../data/items.json";
-import { getNews } from "../api/news.js";
+import common from "./modules/common.js";
+import user from "./modules/user.js";
+import strategy from "./modules/strategy.js";
+import simulation from "./modules/simulation.js";
+import chart from "./modules/chart.js";
 
 export default createStore({
-  state: {
-    items,
-    news: [],
-  },
-  mutations: {
-    SET_NEWS(state, news) {
-      state.news = news;
-    },
-  },
-  actions: {
-    async FETCH_NEWS({ commit }, pageNumber) {
-      const response = await getNews(pageNumber);
-      commit("SET_NEWS", response.data);
-      return response;
-    },
-  },
-  getters: {
-    ITEMS: (state) => state.items,
-    NEWS: (state) => state.news,
-  },
-  modules: { user },
+  state: {},
+  mutations: {},
+  actions: {},
+  modules: { common, user, strategy, simulation, chart },
 });

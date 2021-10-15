@@ -10,14 +10,19 @@
       <nav class="menu-wrapper">
         <div class="user-session-wrapper">
           <!-- 사용자가 로그인을 했을 경우 보여질 영역 -->
-          <template v-if="loggedIn">
+          <template v-if="USER_ID">
             <button
               class="button mypage"
-              @click="$router.push({ name: 'Mypage' })"
+              @click="
+                $router.push({
+                  name: 'MyPageMain',
+                  params: { user_id: USER_ID },
+                })
+              "
             >
               Mypage
             </button>
-            <button class="button login" @click="logout">Log Out</button>
+            <button class="button login" @click="LOGOUT">Log Out</button>
           </template>
           <!-- 사용자가 로그인을 하지 않았을 경우 보여질 영역 -->
           <template v-else>
@@ -53,7 +58,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   data() {
@@ -74,17 +79,8 @@ export default {
       ],
     };
   },
-  computed: {
-    ...mapState("user", ["loggedIn"]),
-  },
-  methods: {
-    ...mapMutations("user", ["SET_USER_SESSION"]),
-    logout() {
-      this.SET_USER_SESSION(false);
-      localStorage.removeItem("accessToken");
-      this.$router.push({ name: "Home" });
-    },
-  },
+  computed: { ...mapGetters("user", ["USER_ID"]) },
+  methods: { ...mapActions("user", ["LOGOUT"]) },
 };
 </script>
 

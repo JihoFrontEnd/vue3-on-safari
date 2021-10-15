@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "이동평균선 돌파 전략",
+    "description": "선택한 주식 2개를 동시에 두 이동평균선이 만나는 시점에 매수/매도 한다."
+  },
+  {
+    "id": "2",
+    "name": "RSI 전략",
+    "description": "시장의 추세를 보고 매수/매도 시점을 결정한다."
+  },
+  {
+    "id": "3",
+    "name": "Algorithm A",
+    "description": "A 알고리즘을 토대로 주식을 매매합니다."
+  },
+  {
+    "id": "4",
+    "name": "Algorithm B",
+    "description": "B 알고리즘을 토대로 주식을 매매합니다."
+  },
+  {
+    "id": "5",
+    "name": "Algorithm C",
+    "description": "C 알고리즘을 토대로 주식을 매매합니다."
+  },
+  {
+    "id": "6",
+    "name": "Algorithm D",
+    "description": "D 알고리즘을 토대로 주식을 매매합니다."
+  },
+  {
+    "id": "7",
+    "name": "Algorithm E",
+    "description": "E 알고리즘을 토대로 주식을 매매합니다."
+  },
+  {
+    "id": "8",
+    "name": "Algorithm F",
+    "description": "F 알고리즘을 토대로 주식을 매매합니다."
+  }
+]
