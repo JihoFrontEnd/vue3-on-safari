@@ -16,7 +16,7 @@ export default {
   },
   created() {
     axios
-      .get("https://quant.cherry-solutions.com/api/md/symbol-list")
+      .get("/api/md/symbol-list")
       .then((response) => (this.list = response.data.data));
   },
 };
