@@ -19,22 +19,43 @@ export default [
   {
     path: "/nested",
     name: "Nested",
-    component: () => import("../views/Nested.vue"),
+    component: () => import("../views/Nested/Nested.vue"),
     children: [
       {
         path: "",
-        redirect: "/nested/daughter"
+        redirect: "/nested/daughter",
       },
       {
         path: "daughter",
         name: "Daughter",
-        component: () => import("../views/Daughter.vue"),
+        component: () => import("../views/Nested/Daughter.vue"),
       },
       {
         path: "son",
         name: "Son",
-        component: () => import("../views/Son.vue"),
+        component: () => import("../views/Nested/Son.vue"),
       },
-    ]
+    ],
+  },
+  {
+    path: "/protocol",
+    name: "Protocol",
+    component: () => import("../views/Protocol/Protocol.vue"),
+    children: [
+      {
+        path: "",
+        redirect: "/protocol/http",
+      },
+      {
+        path: "http",
+        name: "HTTP",
+        component: () => import("../views/Protocol/HTTP.vue"),
+      },
+      {
+        path: "https",
+        name: "HTTPS",
+        component: () => import("../views/Protocol/HTTPS.vue"),
+      },
+    ],
   },
 ];
