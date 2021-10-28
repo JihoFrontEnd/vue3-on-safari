@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Mixed Content Error Handling -->
+    <!-- Mixed Content: The page at 'https://youthful-goodall-d587a7.netlify.app/protocol/http' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://3.36.78.50:5000/flask/md/returns/W1'. This request has been blocked; the content must be served over HTTPS. -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
