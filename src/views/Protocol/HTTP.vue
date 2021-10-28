@@ -15,8 +15,8 @@ export default {
     };
   },
   async created() {
-    const response = await axios.get("/flask/md/returns/W1");
-    this.list = response.data;
+    const { data } = await axios.get("http://3.36.78.50:5000/flask/md/returns/W1");
+    this.list = data;
   },
 };
 </script>
