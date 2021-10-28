@@ -4,7 +4,8 @@
     <router-link to="/about">About</router-link> |
     <router-link :to="{ name: 'Chart' }">Chart</router-link> |
     <router-link :to="{ name: 'Nested' }">Nested</router-link> |
-    <router-link :to="{ name: 'Protocol' }">Protocol</router-link>
+    <router-link :to="{ name: 'Protocol' }">Protocol</router-link> |
+    <router-link :to="{ name: 'Route' }">Route</router-link>
   </div>
   <router-view />
 </template>

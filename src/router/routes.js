@@ -58,4 +58,25 @@ export default [
       },
     ],
   },
+  {
+    path: "/route",
+    name: "Route",
+    component: () => import("../views/Route/Route.vue"),
+    children: [
+      {
+        path: "",
+        redirect: "/route/location",
+      },
+      {
+        path: "location",
+        name: "Location",
+        component: () => import("../views/Route/Location.vue"),
+      },
+      {
+        path: "router-go",
+        name: "RouterGo",
+        component: () => import("../views/Route/RouterGo.vue"),
+      },
+    ],
+  },
 ];
